@@ -5,12 +5,11 @@ from pymongo import MongoClient
 
 
 
-fh =open('/home/arnold/mongopw','r')
+fh = open('/home/arnold/mongopw','r')
 cnt = fh.readline()
 cluster = MongoClient(cnt)
+fh.close()
 
-
-#cluster = MongoClient('mongodb+srv://dbUserX:mOH8td9lUvFkzcQV@cluster0-iub1a.mongodb.net/test')
 
 print(cluster.list_database_names())
 
